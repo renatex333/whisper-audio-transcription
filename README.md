@@ -19,4 +19,22 @@ Instale as dependências necessárias:
 Faça update do Whisper:
 
   pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+
+É necessário também instalar a ferramenta `ffmpeg`.
+
+No Windows, precisamos do [Chocolatey](https://chocolatey.org/). Execute no Windows PowerShell em modo de Administrador:
+
+  choco install ffmpeg
+
+No Linux Ubuntu:
+
+  sudo apt update && sudo apt install ffmpeg
+
+Para salvar as dependências utilizadas, sempre que realizar alguma modificação, use o comando:
+
+  pip freeze > requirements.txt
+
+
+
+
   
