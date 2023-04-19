@@ -1,9 +1,12 @@
 import whisper
 
-model = whisper.load_model("medium")
+model = whisper.load_model("large")
+
+# set filename
+filename = "audio2.mp3.opus"
 
 # load audio and pad/trim it to fit 30 seconds
-audio = whisper.load_audio("audio.mp3")
+audio = whisper.load_audio(filename)
 audio = whisper.pad_or_trim(audio)
 
 # make log-Mel spectrogram and move to the same device as the model
@@ -19,3 +22,8 @@ result = whisper.decode(model, mel, options)
 
 # print the recognized text
 print(result.text)
+
+filename = filename.replace(".", "_")
+
+with open(f"{filename}.txt", "w") as f:
+    f.write(result.text)
