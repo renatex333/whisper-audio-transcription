@@ -1,8 +1,8 @@
 import whisper
 
-model = whisper.load_model("large")
+model = whisper.load_model("large") # "tiny", "base", "small", "medium" or "large"
 
-# set filename
+# set file name
 filename = "audio2.mp3.opus"
 
 # load audio and pad/trim it to fit 30 seconds
@@ -23,7 +23,7 @@ result = whisper.decode(model, mel, options)
 # print the recognized text
 print(result.text)
 
-filename = filename.replace(".", "_")
+filename = filename.split(".")[0]
 
-with open(f"{filename}.txt", "w") as f:
+with open(f"{filename}.transcript.txt", "w") as f:
     f.write(result.text)
