@@ -130,3 +130,9 @@ dmypy.json
 
 # Visual Code Workspace
 whatsapp-audio-transcription.code-workspace
+
+# Audio files and transcripts
+*.wav
+*.mp3
+*.opus
+*.transcript.txt
