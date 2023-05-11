@@ -36,4 +36,6 @@ Para salvar as dependências utilizadas, sempre que realizar alguma modificaçã
 
 [Repositório do Whisper Open Source](https://github.com/openai/whisper)
 
-  
+[Tuto FASTAPI](https://fastapi.tiangolo.com/tutorial/https://fastapi.tiangolo.com/tutorial/)
+
+[Tuto FilesUpload](https://fastapi.tiangolo.com/tutorial/request-files/?h=file)
