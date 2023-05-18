@@ -9,6 +9,11 @@ Conta com o modelo de reconhecimento de voz e transcrição da gigante da Inteli
 Crie um ambiente virtual:
 
     python -m venv env
+
+Ative o ambiente virtual:
+
+    . env/bin/activate
+    . env\Scripts\activate
   
 Instale as dependências necessárias:
 
@@ -31,6 +36,12 @@ No Linux Ubuntu:
 Para salvar as dependências utilizadas, sempre que realizar alguma modificação, use o comando:
 
     pip freeze > requirements.txt
+
+Para rodar a API:
+
+    uvicorn app.main:app --reload
+
+Estará exposto na porta 8000.
 
 ## Referências
 
