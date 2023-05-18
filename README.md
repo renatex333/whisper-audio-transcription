@@ -8,7 +8,7 @@ Conta com o modelo de reconhecimento de voz e transcrição da gigante da Inteli
 
 Crie um ambiente virtual:
 
-  python -m venv env
+    python -m venv env
   
 Instale as dependências necessárias:
 
