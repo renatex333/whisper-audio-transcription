@@ -1,4 +1,4 @@
-# whatsapp-audio-transcription
+# whisper-audio-transcription
 
 Projeto de bot de WhatsApp que recebe áudios de usuários e devolve a transcrição desses áudios de forma corrigida e compreensível.
 
