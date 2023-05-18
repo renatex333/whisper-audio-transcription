@@ -136,3 +136,4 @@ whatsapp-audio-transcription.code-workspace
 *.mp3
 *.opus
 *.transcript.txt
+files/
