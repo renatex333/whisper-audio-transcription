@@ -56,6 +56,8 @@ SUPPORTED_FILE_TYPES = { # File type to extension mapping
 load_dotenv(override=True)
 
 AWS_BUCKET = os.getenv("AWS_BUCKET")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 s3 = boto3.resource("s3")
 bucket = s3.Bucket(AWS_BUCKET)
