@@ -59,13 +59,12 @@ AWS_BUCKET = os.getenv("AWS_BUCKET")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-s3 = boto3.resource("s3")
-bucket = s3.Bucket(AWS_BUCKET)
+s3 = boto3.client("s3", aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
 
 def s3_upload(contents: bytes, key: str):
     # Upload to S3
     logger.info(f"Uploading {key} to S3")
-    bucket.put_object(Key=key, Body=contents)
+    s3.put_object(Bucket=AWS_BUCKET , Key=key, Body=contents)
 
 def transcript(model, path: str):
 
@@ -97,7 +96,7 @@ async def predict(audio: UploadFile = File(...)):
     else:
         contents = audio.file.read()
         # Transcribe
-        file_path = f"files/{audio.filename}"
+        file_path = f"tmp/{audio.filename}"
         with open(file_path, "wb") as write_file:
             write_file.write(contents)
         result = transcript(ml_models["Model"], file_path)
