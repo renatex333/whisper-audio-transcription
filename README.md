@@ -47,6 +47,6 @@ Estará exposto na porta 8000.
 
 [Repositório do Whisper Open Source](https://github.com/openai/whisper)
 
-[Tuto FASTAPI](https://fastapi.tiangolo.com/tutorial/https://fastapi.tiangolo.com/tutorial/)
+[Tuto FASTAPI](https://fastapi.tiangolo.com/tutorial/)
 
 [Tuto FilesUpload](https://fastapi.tiangolo.com/tutorial/request-files/?h=file)
