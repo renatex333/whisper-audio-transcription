@@ -17,7 +17,7 @@ Ative o ambiente virtual:
   
 Instale as dependências necessárias:
 
-    pip install -r requirements.txt
+    pip install -r requirements.txt --no-cache-dir
   
 Faça update do Whisper:
 
