@@ -1,6 +1,6 @@
-# WhatsApp Bot Project
+# Audio Transcription with Whisper
 
-A simple FastAPI application designed for uploading audio messages, returning corrected and comprehensible transcriptions, and saving them to an AWS S3 bucket for storage.
+A simple FastAPI application designed for uploading audio messages, saving them to an AWS S3 bucket for storage, and returning corrected and comprehensible transcriptions.
 
 It utilizes OpenAI's Whisper, a state-of-the-art speech recognition and transcription model (Open Source).
 
