@@ -1,52 +1,52 @@
-# whisper-audio-transcription
+# WhatsApp Bot Project
 
-Projeto de bot de WhatsApp que recebe áudios de usuários e devolve a transcrição desses áudios de forma corrigida e compreensível.
+A simple FastAPI application designed for uploading audio messages, returning corrected and comprehensible transcriptions, and saving them to an AWS S3 bucket for storage.
 
-Conta com o modelo de reconhecimento de voz e transcrição da gigante da Inteligência Artificial OpenAI, o Whisper (Open Source).
+It utilizes OpenAI's Whisper, a state-of-the-art speech recognition and transcription model (Open Source).
 
-## Ambiente de Desenvolvimento do Software
+## Software Development Environment
 
-Crie um ambiente virtual:
+Create a virtual environment:
 
     python -m venv env
 
-Ative o ambiente virtual:
+Activate the virtual environment:
 
-    . env/bin/activate
-    . env\Scripts\activate
-  
-Instale as dependências necessárias:
+    . env/bin/activate  # For Unix-based systems
+    . env\Scripts\activate  # For Windows
+
+Install the necessary dependencies:
 
     pip install -r requirements.txt --no-cache-dir
-  
-Faça update do Whisper:
+
+Update Whisper:
 
     pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
 
-É necessário também instalar a ferramenta `ffmpeg`.
+You also need to install the `ffmpeg` tool.
 
-No Windows, precisamos do [Chocolatey](https://chocolatey.org/). Execute no Windows PowerShell em modo de Administrador:
+On Windows, we need [Chocolatey](https://chocolatey.org/). Run the following command in Windows PowerShell as Administrator:
 
     choco install ffmpeg
 
-No Linux Ubuntu:
+On Ubuntu Linux:
 
     sudo apt update && sudo apt install ffmpeg
 
-Para salvar as dependências utilizadas, sempre que realizar alguma modificação, use o comando:
+To save the dependencies used, whenever you make a modification, use the command:
 
     pip freeze > requirements.txt
 
-Para rodar a API:
+To run the API:
 
     uvicorn app.main:app --reload
 
-Estará exposto na porta 8000.
+It will be exposed on port 8000.
 
-## Referências
+## References
 
-[Repositório do Whisper Open Source](https://github.com/openai/whisper)
+[Whisper Open Source Repository](https://github.com/openai/whisper)
 
-[Tuto FASTAPI](https://fastapi.tiangolo.com/tutorial/)
+[FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
 
-[Tuto FilesUpload](https://fastapi.tiangolo.com/tutorial/request-files/?h=file)
+[File Upload Tutorial](https://fastapi.tiangolo.com/tutorial/request-files/?h=file)
